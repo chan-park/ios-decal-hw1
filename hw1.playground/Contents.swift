@@ -49,8 +49,8 @@ class Words {
 //: ## Q3: More Functions and Object Initialization
     func isAnagram() -> Bool {
         var countLetters : [Character : Int] = [:] //Line X
-        var lenA = self.wordA.characters.count
-        var lenB = self.wordB.characters.count
+        let lenA = self.wordA.characters.count
+        let lenB = self.wordB.characters.count
         
         if lenA != lenB {
             return false
@@ -77,7 +77,7 @@ class Words {
             }
         }
         
-        for (letter, count) in countLetters {
+        for (_, count) in countLetters {
             if count != 0 {
                 return false
             }
